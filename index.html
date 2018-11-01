@@ -16,25 +16,38 @@
 
     <body>
         <h1>Multiplication Table</h1>
+        <span>Rows:</span>
+        <input type="text" name="row">
+        <input type="submit">
+        <br><br>
+        <span>Columns:</span>
+        <input type="text" name="col">
+        <input type="submit">
+        <br><br>
+        <div id="test"></div>
         <script>
             // output the header row
             document.write('<span class="cell header">&times;</span>');
-            for (i = 1; i <= 10; i++) {
+            for (i = 0; i <= 10; i++) {
                 document.write('<span class="cell header">' + i + '</span>');
             }
             document.write('<br>');
             
             // TODO: Write two nested for loops to output the rest of the multiplication table
-            for (i = 1; i <= 10; i++) {
-                for (j = 0; j <= 10; j++) {
+            for (i = 0; i <= 10; i++) {
+                for (j = 0; j <= 11; j++) {
                     if (j==0) {
                         document.write('<span class="cell header">'+i+'</span>')
                     } else {
-                        document.write('<span class="cell">' + i*j + '</span>');
+                        document.write('<span class="cell">' + i*(j-1) + '</span>');
                     }
                 }
                 document.write('<br>')
             }
+            // var node = document.createElement("div")
+            // var t =document.createTextNode("something")
+            // node.appendChild(t)
+            // document.getElementById("test").appendChild(node)
         </script>
     </body>
 </html>
